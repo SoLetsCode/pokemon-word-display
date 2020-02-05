@@ -2,6 +2,22 @@ pokemonNameArray = [];
 correctCount = 0;
 errorCount = 0;
 
+function addEventListenerForm() {
+  let form = document.querySelector(".game-arena__input-form");
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+
+    let indexID = pokemonNameArray.findIndex(name => {
+      return name === event.target.usertext.value;
+    });
+
+    indexID === -1 ? errorCount++ : correctCount++;
+
+    refreshCounter();
+    event.target.reset();
+  });
+}
+
 function getPokemons() {
   //there are 964 entries
   let pokemons = [];
@@ -49,6 +65,18 @@ function createPokeListItem(name, index) {
   return listItem;
 }
 
+function refreshCounter() {
+  document.querySelector(
+    ".game-arena__correct-score"
+  ).innerHTML = `Correct: ${correctCount}`;
+  document.querySelector(
+    ".game-arena__error-score"
+  ).innerHTML = `Correct: ${errorCount}`;
+}
+
 // code to run at startup
 
 getPokemons();
+addEventListenerForm();
+document.querySelector(".game-arena__input").focus();
+refreshCounter();
