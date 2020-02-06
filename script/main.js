@@ -1,6 +1,9 @@
-pokemonNameArray = [];
-correctCount = 0;
-errorCount = 0;
+let pokemonNameArray = [];
+let pokemonMasterArray = [];
+let correctCount = 0;
+let errorCount = 0;
+let numOfPokemon = 5; //sets the number of pokemon to be shown
+let timerInSeconds = 30;
 
 function addEventListenerForm() {
   let form = document.querySelector(".game-arena__input-form");
@@ -19,6 +22,15 @@ function addEventListenerForm() {
         index,
         document.querySelector(".pokemon__list").childNodes[index].id
       );
+      pokemonNameArray = fillPokeNameArray(numOfPokemon, pokemonNameArray);
+      document
+        .querySelector(".pokemon__list")
+        .appendChild(
+          createPokeListItem(
+            pokemonNameArray[pokemonNameArray.length - 1].name,
+            pokemonNameArray[pokemonNameArray.length - 1].htmlID
+          )
+        );
     }
 
     refreshCounter();
@@ -39,10 +51,23 @@ function createUniqueID() {
   return id;
 }
 
+function createPokemonArray(pokemons) {
+  let tempPokeArray = [];
+
+  for (let index in pokemons.data.results) {
+    let pokeObj = {};
+    pokeObj.name = pokemons.data.results[index].name;
+    pokeObj.htmlID = createUniqueID();
+    tempPokeArray.push(pokeObj);
+  }
+
+  return tempPokeArray;
+}
+
 function getPokemons() {
   //there are 964 entries
   let pokemons = [];
-  let limit = 5;
+  let limit = 50;
   let offset = Math.floor(Math.random() * (964 - limit - 500)); //remove 500 to get full list
   let request = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
   let pokemonPromise = axios.get(request);
@@ -50,23 +75,16 @@ function getPokemons() {
   pokemonPromise
     .then(response => {
       pokemons = response;
-      createPokemonArray(pokemons);
+      pokemonMasterArray = createPokemonArray(pokemons);
+      pokemonNameArray = fillPokeNameArray(numOfPokemon, pokemonNameArray); //alter this number to change list length
       document
         .querySelector(".pokemon")
         .appendChild(createPokeHTMLList(pokemonNameArray));
+      timer(timerInSeconds);
     })
     .catch(error => {
       console.log(error);
     });
-}
-
-function createPokemonArray(pokemons) {
-  for (let index in pokemons.data.results) {
-    let pokeObj = {};
-    pokeObj.name = pokemons.data.results[index].name;
-    pokeObj.htmlID = createUniqueID();
-    pokemonNameArray.push(pokeObj);
-  }
 }
 
 function createPokeHTMLList(pokeArray) {
@@ -82,13 +100,24 @@ function createPokeHTMLList(pokeArray) {
   return list;
 }
 
-function createPokeListItem(name, index) {
+function createPokeListItem(name, id) {
   let listItem = document.createElement("li");
   listItem.classList.add("pokemon__list-item");
-  listItem.id = index;
+  listItem.id = id;
   listItem.innerHTML = name;
 
   return listItem;
+}
+
+function fillPokeNameArray(number, pokemonNameArray) {
+  //number is how much to fill the array to provided there are items left in masterArray
+  let tempPokeArray = pokemonNameArray;
+  while (tempPokeArray.length < number && pokemonMasterArray.length > 0) {
+    let randomNum = Math.floor(Math.random() * (pokemonMasterArray.length - 1));
+    tempPokeArray.push(pokemonMasterArray[randomNum]);
+  }
+
+  return tempPokeArray;
 }
 
 function refreshCounter() {
@@ -107,16 +136,19 @@ function removeItem(index, id) {
     .concat(pokemonNameArray.slice(index + 1));
 }
 
-function timer() {
-  let timerWidth = document.querySelector(".game-arena__timer").offsetWidth;
+function timer(seconds) {
   let timer = document.querySelector(".game-arena__timer");
-  timer.style.transition = "width 30s";
+  timer.style.transition = `width ${seconds}s`;
   timer.style.width = 0;
+
+  setTimeout(() => {
+    console.log("GAME OVER!");
+  }, seconds * 1000);
 }
 
 // code to run at startup
 
+document.querySelector(".game-arena__input").focus();
 getPokemons();
 addEventListenerForm();
-document.querySelector(".game-arena__input").focus();
 refreshCounter();

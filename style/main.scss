@@ -67,14 +67,17 @@ body {
   }
 
   &__timer-container {
-    display: flex;
-    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
   }
   &__timer {
-    text-align: center;
     width: 100%;
     transition-timing-function: linear;
     background-color: rgb(255, 203, 5);
     border-radius: 5px;
+  }
+
+  &__timer-text {
+    padding-left: 5px;
   }
 }

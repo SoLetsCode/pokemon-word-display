@@ -84,20 +84,19 @@ body {
 }
 
 .game-arena__timer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: black;
+  border-radius: 5px;
 }
 
 .game-arena__timer {
-  text-align: center;
   width: 100%;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
   background-color: #ffcb05;
   border-radius: 5px;
+}
+
+.game-arena__timer-text {
+  padding-left: 5px;
 }
 /*# sourceMappingURL=main.css.map */
