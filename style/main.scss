@@ -1,0 +1,80 @@
+/* reset the page */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fjalla One", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(../assets/hero-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.body-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 30px;
+}
+
+.pokemon {
+  &__list {
+    padding: 0;
+    &-item {
+      list-style-type: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-arena {
+  &__input {
+    width: 20vw;
+    min-width: 250px;
+    word-wrap: break-word;
+    border-radius: 5px;
+    border: 3px solid rgb(243, 243, 213);
+
+    &:focus {
+      outline: transparent;
+    }
+  }
+
+  &__score-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__timer-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__timer {
+    text-align: center;
+    width: 100%;
+    transition-timing-function: linear;
+    background-color: rgb(255, 203, 5);
+    border-radius: 5px;
+  }
+}

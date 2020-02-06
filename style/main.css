@@ -1,4 +1,103 @@
-h3 {
-  color: blue;
+/* reset the page */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Fjalla One", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-image: url(../assets/hero-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.body-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  font-size: 30px;
+}
+
+.pokemon__list {
+  padding: 0;
+}
+
+.pokemon__list-item {
+  list-style-type: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-arena__input {
+  width: 20vw;
+  min-width: 250px;
+  word-wrap: break-word;
+  border-radius: 5px;
+  border: 3px solid #f3f3d5;
+}
+
+.game-arena__input:focus {
+  outline: transparent;
+}
+
+.game-arena__score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.game-arena__timer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game-arena__timer {
+  text-align: center;
+  width: 100%;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  background-color: #ffcb05;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */

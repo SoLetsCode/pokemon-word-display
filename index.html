@@ -6,35 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pokemon Word Generator</title>
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
-    <header class="header">
-      <h3 class="header__title">Poke Typing Battle</h3>
-    </header>
+    <div class="body-wrap">
+      <header class="header">
+        <h3 class="header__title">Poke Typing Battle</h3>
+      </header>
 
-    <div class="container">
-      <div class="pokemon">
-        <!-- pokemon names will show up here -->
-      </div>
-      <div class="game-arena">
-        <form class="game-arena__input-form" name="userinput" id="pokename">
-          <input
-            class="game-arena__input"
-            type="text"
-            name="usertext"
-            autocomplete="off"
-          />
-        </form>
-        <div class="game-arena__status-container">
-          <div class="game-arena__correct-score"></div>
-          <div class="game-arena__error-score"></div>
-          <div class="game-arena__timer"></div>
-          Timer
+      <div class="container">
+        <div class="pokemon">
+          <!-- pokemon names will show up here -->
+        </div>
+        <div class="game-arena">
+          <form class="game-arena__input-form" name="userinput" id="pokename">
+            <input
+              class="game-arena__input"
+              type="text"
+              name="usertext"
+              autocomplete="off"
+              placeholder="type the pokemon name and press enter."
+            />
+          </form>
+          <div class="game-arena__status-container">
+            <div class="game-arena__score-container">
+              <div class="game-arena__correct-score"></div>
+              <div class="game-arena__error-score"></div>
+            </div>
+            <div class="game-arena__timer-container">
+              <div class="game-arena__timer">Timer</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script/main.js"></script>
   </body>

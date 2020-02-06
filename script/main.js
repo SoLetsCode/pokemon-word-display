@@ -107,6 +107,13 @@ function removeItem(index, id) {
     .concat(pokemonNameArray.slice(index + 1));
 }
 
+function timer() {
+  let timerWidth = document.querySelector(".game-arena__timer").offsetWidth;
+  let timer = document.querySelector(".game-arena__timer");
+  timer.style.transition = "width 30s";
+  timer.style.width = 0;
+}
+
 // code to run at startup
 
 getPokemons();
