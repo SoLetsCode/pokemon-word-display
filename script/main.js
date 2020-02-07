@@ -8,13 +8,14 @@ let timerInSeconds = 10;
 function addEventListenerPlayButton() {
   let button = document.querySelector(".play__button");
   button.addEventListener("click", () => {
-    //reset counters, word field and refill timer bar
+    //reset counters, word field and refill timer bar etc.
     correctCount = 0;
     errorCount = 0;
     document.querySelector(".game-arena__timer").style.transition = "";
     document.querySelector(".game-arena__timer").style.width = "100%";
     document.querySelector(".pokemon").innerHTML = "";
     pokemonNameArray = [];
+    document.querySelector(".game-arena__input").value = "";
 
     getPokemons();
     refreshCounter();

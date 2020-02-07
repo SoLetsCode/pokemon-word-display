@@ -103,4 +103,22 @@ body {
 .game-arena__timer-text {
   padding-left: 5px;
 }
+
+.play__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.play__button {
+  font-family: "Fjalla One", sans-serif;
+  color: black;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=main.css.map */

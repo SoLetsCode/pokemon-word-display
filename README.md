@@ -3,7 +3,10 @@
 -Created using poke api to grab names
 -user inputs word, if word matches score will go up and the word will dissapear.
 -incorrect inputs increase the error
--used random number generator to implement unique IDs for the pokemon names
+
+Cool techniques used
+-used random number generator to implement unique IDs for the pokemon names to aid removal
+-used CSS transistions to make a timer animation
 
 features to the implemented
 -style button
@@ -13,3 +16,5 @@ features to the implemented
 -statistics
 -change arrangement to css-grid
 -be able to change the list of pokemon and timer
+-bouncing pokemon in the background
+-when full word is typed clear it from the list
