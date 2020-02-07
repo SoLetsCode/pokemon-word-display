@@ -74,6 +74,10 @@ body {
   outline: transparent;
 }
 
+.game-arena__status-container {
+  margin-bottom: 10px;
+}
+
 .game-arena__score-container {
   display: -webkit-box;
   display: -ms-flexbox;

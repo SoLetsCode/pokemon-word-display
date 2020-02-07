@@ -3,7 +3,26 @@ let pokemonMasterArray = [];
 let correctCount = 0;
 let errorCount = 0;
 let numOfPokemon = 5; //sets the number of pokemon to be shown
-let timerInSeconds = 30;
+let timerInSeconds = 10;
+
+function addEventListenerPlayButton() {
+  let button = document.querySelector(".play__button");
+  button.addEventListener("click", () => {
+    //reset counters, word field and refill timer bar
+    correctCount = 0;
+    errorCount = 0;
+    document.querySelector(".game-arena__timer").style.transition = "";
+    document.querySelector(".game-arena__timer").style.width = "100%";
+    document.querySelector(".pokemon").innerHTML = "";
+    pokemonNameArray = [];
+
+    getPokemons();
+    refreshCounter();
+    document.querySelector(".game-arena__input").removeAttribute("disabled");
+    document.querySelector(".game-arena__input").focus();
+    button.style.display = "none";
+  });
+}
 
 function addEventListenerForm() {
   let form = document.querySelector(".game-arena__input-form");
@@ -115,6 +134,7 @@ function fillPokeNameArray(number, pokemonNameArray) {
   while (tempPokeArray.length < number && pokemonMasterArray.length > 0) {
     let randomNum = Math.floor(Math.random() * (pokemonMasterArray.length - 1));
     tempPokeArray.push(pokemonMasterArray[randomNum]);
+    pokemonMasterArray.splice(randomNum, 1);
   }
 
   return tempPokeArray;
@@ -131,9 +151,7 @@ function refreshCounter() {
 
 function removeItem(index, id) {
   document.getElementById(id).remove();
-  pokemonNameArray = pokemonNameArray
-    .slice(0, index)
-    .concat(pokemonNameArray.slice(index + 1));
+  pokemonNameArray.splice(index, 1);
 }
 
 function timer(seconds) {
@@ -143,12 +161,12 @@ function timer(seconds) {
 
   setTimeout(() => {
     console.log("GAME OVER!");
+    document.querySelector(".game-arena__input").setAttribute("disabled", true);
+    document.querySelector(".play__button").style.display = "inline-block";
   }, seconds * 1000);
 }
 
 // code to run at startup
 
-document.querySelector(".game-arena__input").focus();
-getPokemons();
 addEventListenerForm();
-refreshCounter();
+addEventListenerPlayButton();

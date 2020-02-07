@@ -7,4 +7,11 @@
 
 features to the implemented
 -timer
--refreshing the names list
+-restart button
+-score based on letters typed
+-WPM speed?
+-statistics
+-change arrangement to css-grid
+-start button
+-list that doesn't repeat
+-be able to change the list of pokemon and timer -
