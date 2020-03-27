@@ -31,7 +31,7 @@ function addEventListenerForm() {
     event.preventDefault();
 
     let index = pokemonNameArray.findIndex(object => {
-      return object.name === event.target.usertext.value;
+      return object.name === event.target.usertext.value.toLowerCase();
     });
 
     if (index === -1) {

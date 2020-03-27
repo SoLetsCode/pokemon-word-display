@@ -121,6 +121,8 @@ body {
 
   &__instructions {
     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    text-align: center;
+    margin: 0;
   }
 }
 
@@ -136,7 +138,7 @@ body {
 }
 
 .kudos__flat-icon {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
 }

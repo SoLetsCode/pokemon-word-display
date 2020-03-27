@@ -140,6 +140,8 @@ body {
 
 .play__instructions {
   font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  text-align: center;
+  margin: 0;
 }
 
 .image__pokemon {
@@ -154,69 +156,69 @@ body {
 }
 
 .kudos__flat-icon {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
 
 .x1 {
-  -webkit-animation: x 2s linear infinite alternate;
-          animation: x 2s linear infinite alternate;
-}
-
-.y1 {
-  -webkit-animation: y 6s linear infinite alternate;
-          animation: y 6s linear infinite alternate;
-}
-
-.x2 {
-  -webkit-animation: x 4s linear infinite alternate;
-          animation: x 4s linear infinite alternate;
-}
-
-.y2 {
-  -webkit-animation: y 5s linear infinite alternate;
-          animation: y 5s linear infinite alternate;
-}
-
-.x3 {
-  -webkit-animation: x 4s linear infinite alternate;
-          animation: x 4s linear infinite alternate;
-}
-
-.y3 {
-  -webkit-animation: y 4s linear infinite alternate;
-          animation: y 4s linear infinite alternate;
-}
-
-.x4 {
-  -webkit-animation: x 14s linear infinite alternate;
-          animation: x 14s linear infinite alternate;
-}
-
-.y4 {
-  -webkit-animation: y 5s linear infinite alternate;
-          animation: y 5s linear infinite alternate;
-}
-
-.x5 {
-  -webkit-animation: x 6s linear infinite alternate;
-          animation: x 6s linear infinite alternate;
-}
-
-.y5 {
-  -webkit-animation: y 9s linear infinite alternate;
-          animation: y 9s linear infinite alternate;
-}
-
-.x6 {
   -webkit-animation: x 7s linear infinite alternate;
           animation: x 7s linear infinite alternate;
 }
 
+.y1 {
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
+}
+
+.x2 {
+  -webkit-animation: x 7s linear infinite alternate;
+          animation: x 7s linear infinite alternate;
+}
+
+.y2 {
+  -webkit-animation: y 3s linear infinite alternate;
+          animation: y 3s linear infinite alternate;
+}
+
+.x3 {
+  -webkit-animation: x 9s linear infinite alternate;
+          animation: x 9s linear infinite alternate;
+}
+
+.y3 {
+  -webkit-animation: y 3s linear infinite alternate;
+          animation: y 3s linear infinite alternate;
+}
+
+.x4 {
+  -webkit-animation: x 10s linear infinite alternate;
+          animation: x 10s linear infinite alternate;
+}
+
+.y4 {
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
+}
+
+.x5 {
+  -webkit-animation: x 9s linear infinite alternate;
+          animation: x 9s linear infinite alternate;
+}
+
+.y5 {
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
+}
+
+.x6 {
+  -webkit-animation: x 11s linear infinite alternate;
+          animation: x 11s linear infinite alternate;
+}
+
 .y6 {
-  -webkit-animation: y 6s linear infinite alternate;
-          animation: y 6s linear infinite alternate;
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
 }
 
 @-webkit-keyframes x {
