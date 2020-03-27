@@ -35,6 +35,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
 .header__title {
@@ -162,8 +164,8 @@ body {
 }
 
 .x1 {
-  -webkit-animation: x 7s linear infinite alternate;
-          animation: x 7s linear infinite alternate;
+  -webkit-animation: x 10s linear infinite alternate;
+          animation: x 10s linear infinite alternate;
 }
 
 .y1 {
@@ -172,53 +174,53 @@ body {
 }
 
 .x2 {
+  -webkit-animation: x 5s linear infinite alternate;
+          animation: x 5s linear infinite alternate;
+}
+
+.y2 {
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
+}
+
+.x3 {
+  -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+}
+
+.y3 {
+  -webkit-animation: y 8s linear infinite alternate;
+          animation: y 8s linear infinite alternate;
+}
+
+.x4 {
   -webkit-animation: x 7s linear infinite alternate;
           animation: x 7s linear infinite alternate;
 }
 
-.y2 {
-  -webkit-animation: y 3s linear infinite alternate;
-          animation: y 3s linear infinite alternate;
-}
-
-.x3 {
-  -webkit-animation: x 9s linear infinite alternate;
-          animation: x 9s linear infinite alternate;
-}
-
-.y3 {
-  -webkit-animation: y 3s linear infinite alternate;
-          animation: y 3s linear infinite alternate;
-}
-
-.x4 {
-  -webkit-animation: x 10s linear infinite alternate;
-          animation: x 10s linear infinite alternate;
-}
-
 .y4 {
-  -webkit-animation: y 4s linear infinite alternate;
-          animation: y 4s linear infinite alternate;
+  -webkit-animation: y 6s linear infinite alternate;
+          animation: y 6s linear infinite alternate;
 }
 
 .x5 {
+  -webkit-animation: x 6s linear infinite alternate;
+          animation: x 6s linear infinite alternate;
+}
+
+.y5 {
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
+}
+
+.x6 {
   -webkit-animation: x 9s linear infinite alternate;
           animation: x 9s linear infinite alternate;
 }
 
-.y5 {
-  -webkit-animation: y 4s linear infinite alternate;
-          animation: y 4s linear infinite alternate;
-}
-
-.x6 {
-  -webkit-animation: x 11s linear infinite alternate;
-          animation: x 11s linear infinite alternate;
-}
-
 .y6 {
-  -webkit-animation: y 4s linear infinite alternate;
-          animation: y 4s linear infinite alternate;
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
 }
 
 @-webkit-keyframes x {
