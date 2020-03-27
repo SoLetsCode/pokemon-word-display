@@ -38,11 +38,13 @@ body {
 }
 
 .header__title {
-  font-size: 30px;
+  font-size: 5vw;
+  margin-bottom: 0;
 }
 
 .pokemon__list {
   padding: 0;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
 }
 
 .pokemon__list-item {
@@ -63,7 +65,8 @@ body {
 }
 
 .game-arena__input {
-  width: 20vw;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  width: 100%;
   min-width: 250px;
   word-wrap: break-word;
   border-radius: 5px;
@@ -72,6 +75,14 @@ body {
 
 .game-arena__input:focus {
   outline: transparent;
+}
+
+.game-arena__error-score {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+.game-arena__correct-score {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
 }
 
 .game-arena__status-container {
@@ -94,6 +105,7 @@ body {
 
 .game-arena__timer {
   width: 100%;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
   background-color: #ffcb05;
@@ -116,9 +128,122 @@ body {
 .play__button {
   font-family: "Fjalla One", sans-serif;
   color: black;
+  font-weight: bold;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   background-color: red;
-  height: 50px;
-  width: 50px;
+  height: 6vw;
+  min-height: 50px;
+  width: 6vw;
+  min-width: 50px;
   border-radius: 50%;
+}
+
+.play__instructions {
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+.image__pokemon {
+  height: 5vw;
+  width: 5vw;
+  min-height: 50px;
+  min-width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.kudos__flat-icon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.x1 {
+  -webkit-animation: x 2s linear infinite alternate;
+          animation: x 2s linear infinite alternate;
+}
+
+.y1 {
+  -webkit-animation: y 6s linear infinite alternate;
+          animation: y 6s linear infinite alternate;
+}
+
+.x2 {
+  -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+}
+
+.y2 {
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
+}
+
+.x3 {
+  -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+}
+
+.y3 {
+  -webkit-animation: y 4s linear infinite alternate;
+          animation: y 4s linear infinite alternate;
+}
+
+.x4 {
+  -webkit-animation: x 14s linear infinite alternate;
+          animation: x 14s linear infinite alternate;
+}
+
+.y4 {
+  -webkit-animation: y 5s linear infinite alternate;
+          animation: y 5s linear infinite alternate;
+}
+
+.x5 {
+  -webkit-animation: x 6s linear infinite alternate;
+          animation: x 6s linear infinite alternate;
+}
+
+.y5 {
+  -webkit-animation: y 9s linear infinite alternate;
+          animation: y 9s linear infinite alternate;
+}
+
+.x6 {
+  -webkit-animation: x 7s linear infinite alternate;
+          animation: x 7s linear infinite alternate;
+}
+
+.y6 {
+  -webkit-animation: y 6s linear infinite alternate;
+          animation: y 6s linear infinite alternate;
+}
+
+@-webkit-keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 100px));
+            transform: translateX(calc(100vw - 100px));
+  }
+}
+
+@keyframes x {
+  100% {
+    -webkit-transform: translateX(calc(100vw - 100px));
+            transform: translateX(calc(100vw - 100px));
+  }
+}
+
+@-webkit-keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 100px));
+            transform: translateY(calc(100vh - 100px));
+  }
+}
+
+@keyframes y {
+  100% {
+    -webkit-transform: translateY(calc(100vh - 100px));
+            transform: translateY(calc(100vh - 100px));
+  }
 }
 /*# sourceMappingURL=main.css.map */
