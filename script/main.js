@@ -3,7 +3,7 @@ let pokemonMasterArray = [];
 let correctCount = 0;
 let errorCount = 0;
 let numOfPokemon = 5; //sets the number of pokemon to be shown
-let timerInSeconds = 10;
+let timerInSeconds = 20;
 
 function addEventListenerPlayButton() {
   let button = document.querySelector(".play__button");
